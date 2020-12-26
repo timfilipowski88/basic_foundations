@@ -93,7 +93,7 @@ console.log(arrayOdd(1,50));
 function greatY(array,y) {
     var temp = [];
     for (var i = 0; i<array.length; i++) {
-        if (i > y) {
+        if (array[i] > y) {
             temp.push(i);
         }
     }
@@ -104,4 +104,35 @@ var y = 3;
 console.log(greatY(arrayEight,y));
 
 // #9
-// function squares()
+function squares([array]) {
+    var squared = [];
+    for(i=0; i<array.length; i++) {
+        array[i] = array[i] * array[i];
+        squared.push(array[i]);
+    }
+    return squared;
+}
+var arrayNine = [1,5,10,-2];
+console.log(squares([arrayNine]));
+
+// #10
+function zeroNeg([array]) {
+    var zeroed = [];
+    for (i=0; i<array.length; i++) {
+        if (array[i] >= 0) {
+            zeroed.push(array[i]); 
+        }
+        else {
+            zeroed.push(0);
+        }
+    }
+    return zeroed;
+}
+var arrayTen = [1, 5, 10, -2];
+console.log(zeroNeg([arrayTen]));
+
+// #11
+function mma(){
+
+}
+var arrayEleven = [1,5,10,-2]
