@@ -66,7 +66,7 @@ console.log(findMax(arrayThree));
 
 // #6
 function findAvg(array) {
-    var sum =0;
+    var sum = 0;
     var avg = 0;
     for (var i=0; i < array.length; i++) {
         sum += array[i];
@@ -132,7 +132,57 @@ var arrayTen = [1, 5, 10, -2];
 console.log(zeroNeg([arrayTen]));
 
 // #11
-function mma(){
-
+function mma([array]) {    
+    var max = 0;
+        for (var i=0; i < array.length; i++) {
+        if (array[i] > max) {
+            max = array[i];
+        }
+    }
+    var min = 0;
+    for (var i=0; i < array.length; i++) {
+        if (array[i] < min) {
+            min = array[i];
+        }
+    }
+    var sum = 0;
+    var avg = 0;
+    for (var i=0; i < array.length; i++) {
+        sum += array[i];
+        avg = sum / array.length;
+    }
+    return [max, min, avg];
 }
 var arrayEleven = [1,5,10,-2]
+console.log(mma([arrayEleven]));
+
+// #12 
+function swap([array]) {
+    var first = array[0];
+    var last = array[array.length-1];
+    var middle;
+    for (var i = 1; i<array.length-1; i++) {
+        middle.push(array[i]);
+    }
+    return [last, middle, first];
+}
+var arrayTwelve = [1,5,10,-2];
+//console.log(swap([arrayTwelve]));
+
+// I can't for the life of me figure this one out. 
+
+// #13
+function numToString([array])  {
+    var result = [];
+    for (var i=0; i<array.length; i++) {
+        if (array[i] < 0) {
+            result.push("dojo");
+        }
+        else {
+            result.push(array[i]);
+        }
+    }
+    return result;
+}
+var arrayThirteen = [-1,-3,2];
+console.log(numToString([arrayThirteen]));
